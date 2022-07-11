@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque.HelloController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+            <items>
+              <MenuItem fx:id="barreQuitter" mnemonicParsing="false" text="Quitter" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edition">
+            <items>
+                  <MenuItem fx:id="barreAjouter" mnemonicParsing="false" text="Ajouter" />
+              <MenuItem fx:id="barreEditer" mnemonicParsing="false" text="Editer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Aide">
+            <items>
+              <MenuItem fx:id="barreAPropos" mnemonicParsing="false" text="A propos" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="boutonQuitter" cancelButton="true" layoutX="320.0" layoutY="324.0" mnemonicParsing="false" text="Quitter" />
+            <Button id="boutonEditer" layoutX="248.0" layoutY="324.0" mnemonicParsing="false" text="Editer" />
+            <Button id="boutonAjouter" layoutX="178.0" layoutY="324.0" mnemonicParsing="false" text="Ajouter" />
+            <ScrollPane prefHeight="310.0" prefWidth="408.0">
+               <content>
+                  <TableView prefHeight="675.0" prefWidth="837.0">
+                    <columns>
+                      <TableColumn fx:id="colonneType" prefWidth="47.0" text="Type" />
+                      <TableColumn fx:id="colonneRef" prefWidth="68.0" text="Référence" />
+                        <TableColumn fx:id="colonneTitre" prefWidth="227.0" text="Titre" />
+                        <TableColumn fx:id="colonneEtat" prefWidth="51.0" text="Etat" />
+                        <TableColumn fx:id="colonneAuteur" prefWidth="52.0" text="Auteur" />
+                        <TableColumn fx:id="colonneActeur" prefWidth="75.0" text="Acteurs" />
+                        <TableColumn fx:id="colonneLangues" prefWidth="75.0" text="Langues" />
+                        <TableColumn fx:id="colonneSupport" prefWidth="75.0" text="Support" />
+                        <TableColumn fx:id="colonneTheme" prefWidth="75.0" text="Thème" />
+                        <TableColumn fx:id="colonneDateParution" prefWidth="75.0" text="Date de parution" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <Pane prefHeight="375.0" prefWidth="177.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="24.0" text="Filtres" />
+            <ComboBox fx:id="filtreType" layoutX="14.0" layoutY="51.0" prefWidth="150.0" promptText="Type" />
+            <ComboBox fx:id="filtreEtat" layoutX="14.0" layoutY="175.0" prefWidth="150.0" promptText="Etat" />
+            <TextField fx:id="filtreTitre" layoutX="15.0" layoutY="115.0" promptText="Titre" />
+            <Button fx:id="boutonFiltrer" layoutX="117.0" layoutY="322.0" mnemonicParsing="false" text="Filtrer" />
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

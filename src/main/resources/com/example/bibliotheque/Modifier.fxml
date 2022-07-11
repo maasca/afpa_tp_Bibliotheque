@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <Pane prefHeight="375.0" prefWidth="137.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Type" />
+            <Label layoutX="13.0" layoutY="153.0" text="Référence" />
+            <Label disable="true" layoutX="39.0" layoutY="181.0" text="Label" />
+            <Label layoutX="15.0" layoutY="211.0" text="Titre" />
+            <TextField disable="true" layoutX="14.0" layoutY="236.0" prefHeight="25.0" prefWidth="111.0" />
+            <Label layoutX="14.0" layoutY="276.0" text="Auteur" />
+            <TextField disable="true" layoutX="13.0" layoutY="304.0" prefHeight="24.0" prefWidth="111.0" />
+            <RadioButton layoutX="22.0" layoutY="40.0" mnemonicParsing="false" text="Vidéo" />
+            <RadioButton layoutX="22.0" layoutY="72.0" mnemonicParsing="false" text="Document" />
+            <RadioButton layoutX="23.0" layoutY="104.0" mnemonicParsing="false" text="Revue" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <VBox prefHeight="185.0" prefWidth="463.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane disable="true" prefHeight="164.0" prefWidth="463.0">
+               <children>
+                  <Label layoutX="216.0" layoutY="6.0" text="Vidéo" />
+                  <Label layoutX="17.0" layoutY="29.0" text="Acteurs" />
+                  <Label layoutX="15.0" layoutY="74.0" text="Langues" />
+                  <Label layoutX="15.0" layoutY="114.0" text="Support" />
+                  <TextField disable="true" layoutX="126.0" layoutY="25.0" prefHeight="25.0" prefWidth="118.0" />
+                  <CheckBox disable="true" layoutX="125.0" layoutY="74.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="84.0" text="VOST" />
+                  <CheckBox disable="true" layoutX="232.0" layoutY="74.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="59.0" text="VF" />
+                  <RadioButton disable="true" layoutX="124.0" layoutY="114.0" mnemonicParsing="false" text="VHS" />
+                  <RadioButton disable="true" layoutX="231.0" layoutY="114.0" mnemonicParsing="false" text="DVD" />
+                  <TextField disable="true" layoutX="276.0" layoutY="25.0" prefHeight="25.0" prefWidth="118.0" />
+               </children>
+            </Pane>
+            <Pane disable="true" prefHeight="159.0" prefWidth="463.0">
+               <children>
+                  <Label layoutX="220.0" layoutY="14.0" text="Ecrit" />
+                  <Separator layoutX="140.0" layoutY="-1.0" prefWidth="200.0" />
+                  <Label layoutX="14.0" layoutY="46.0" text="Thème" />
+                  <Label layoutX="14.0" layoutY="89.0" text="Date de parution" />
+                  <TextField disable="true" layoutX="129.0" layoutY="85.0" prefHeight="25.0" prefWidth="86.0" promptText="JJ/MM/AAAA" />
+                  <Label layoutX="253.0" layoutY="89.0" text="Auteur" />
+                  <TextField disable="true" layoutX="300.0" layoutY="85.0" />
+                  <ChoiceBox disable="true" layoutX="129.0" layoutY="42.0" prefWidth="150.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="110.0" prefWidth="463.0">
+               <children>
+                  <Button layoutX="370.0" layoutY="33.0" mnemonicParsing="false" text="Annuler" />
+                  <Button disable="true" layoutX="281.0" layoutY="33.0" mnemonicParsing="false" text="Valider" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
